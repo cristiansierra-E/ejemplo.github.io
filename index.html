@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristian Sierra Equihua — UABC</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="diseño.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <span class="hero-badge">Universidad Autónoma de Baja California</span>
+      <h1>Cristian<br><span>Sierra Equihua</span></h1>
+      <p class="hero-sub">Temas Selectos de Sistemas Computacionales</p>
+
+      <p class="hero-desc">
+        Estudiante de la UABC apasionado por el desarrollo web, el diseño de interfaces y
+        las tecnologías del front-end. Este portafolio reúne mis proyectos y prácticas del curso,
+        reflejando mi aprendizaje con HTML5, CSS3 y JavaScript.
+      </p>
+    </div>
+
+    <div class="hero-photo">
+      <div class="photo-frame">
+
+        <div class="photo-box">
+          <div class="photo-placeholder-icon">📷</div>
+
+          <p class="photo-placeholder-text">
+            Tu foto aquí<br>
+            <small style="opacity:.6">Reemplaza este bloque</small>
+          </p>
+        </div>
+
+        <span class="photo-tag">Cimarrón UABC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SOBRE MÍ ══ -->
+  <section id="sobre-mi">
+
+    <div class="reveal">
+      <p class="section-label">Conóceme</p>
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="section-line"></div>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <p class="info-card-label">Nombre completo</p>
+          <p class="info-card-value">Cristian Sierra Equihua</p>
+        </div>
+
+        <div class="info-card">
+          <p class="info-card-label">Universidad</p>
+          <p class="info-card-value">UABC</p>
+        </div>
+
+        <div class="info-card">
+          <p class="info-card-label">Matrícula</p>
+          <p class="info-card-value">01188155</p>
+        </div>
+
+        <div class="info-card">
+          <p class="info-card-label">Curso</p>
+          <p class="info-card-value">Temas Selectos — Sistemas Computacionales</p>
+        </div>
+
+        <div class="info-card">
+          <p class="info-card-label">Ciudad</p>
+          <p class="info-card-value">Mexicali, Baja California</p>
+        </div>
+
+        <div class="info-card">
+          <p class="info-card-label">Año</p>
+          <p class="info-card-value">2024</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about-text reveal">
+
+      <p class="section-label">Descripción</p>
+      <h2 class="section-title">Mi perfil</h2>
+      <div class="section-line"></div>
+
+      <p>
+        Soy estudiante de la Universidad Autónoma de Baja California, cursando la materia de
+        <strong>Temas Selectos de Sistemas Computacionales</strong>. A lo largo del semestre he
+        desarrollado habilidades en el diseño y construcción de páginas web.
+      </p>
+
+      <p>
+        Me interesa la programación front-end y cómo combinar lógica y diseño para crear
+        experiencias digitales atractivas y funcionales.
+      </p>
+
+      <p>
+        Este portafolio refleja mi progreso desde los fundamentos del HTML hasta proyectos más
+        complejos que integran JavaScript, Flexbox, Grid y animaciones CSS.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ══ HABILIDADES ══ -->
+  <section id="habilidades">
+
+    <p class="section-label reveal">Tecnologías</p>
+    <h2 class="section-title reveal">Mis habilidades</h2>
+    <div class="section-line reveal"></div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🌐</div>
+        <p class="skill-name">HTML5</p>
+        <p class="skill-level">Avanzado</p>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🎨</div>
+        <p class="skill-name">CSS3</p>
+        <p class="skill-level">Avanzado</p>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚡</div>
+        <p class="skill-name">JavaScript</p>
+        <p class="skill-level">Intermedio</p>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:65%"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-brand">Cristian Sierra Equihua</div>
+
+    <p class="footer-copy">
+      © 2024 — Todos los derechos reservados
+    </p>
+
+    <p class="footer-uabc">
+      Universidad Autónoma de Baja California<br>
+
+      <span style="color:rgba(255,255,255,0.25);font-size:.75rem;">
+        Por la realización plena del ser
+      </span>
+    </p>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, i * 60);
+
+          observer.unobserve(entry.target);
+        }
+
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
